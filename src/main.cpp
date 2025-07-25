@@ -6,13 +6,15 @@
 
 
 int main()
-{	
-	std::cout<<"Enter a text for encoding and the number of steps"<< std::endl;
+{
 	std::string encode;
 	int step ;
-	std::cin>>encode>>step;
-	std::string first = encoding(encode,step);
-	std::string second=decoding(first,step);
-	test(encode, second);
+	do{
+		std::cout<<"Enter a text for encoding and the number of steps"<< std::endl;
+		std::cin>>encode>>step;
+		std::string first = encoding(encode,step);
+		std::string second=decoding(first,step);
+		test(encode, second);
+	}while (encode!="break");
 	return 0;
 }	
